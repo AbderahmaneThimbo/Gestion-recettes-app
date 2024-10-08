@@ -31,10 +31,13 @@ Clonez le projet et installez les dépendances :
 
 ```bash
 git clone https://github.com/AbderahmaneThimbo/Gestion-recettes-app.git
+```
+```bash
 cd Gestion-recettes-app
+```
+```bash
 npm install
 ```
-
 ## Démarrer le projet
 
 ```bash

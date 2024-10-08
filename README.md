@@ -30,8 +30,8 @@ Cette application permet aux utilisateurs de gérer des recettes avec leurs cate
 Clonez le projet et installez les dépendances :
 
 ```bash
-git clone https://github.com/AbderahmaneThimbo/gestion_recettes_vue_app.git
-cd gestion_recettes_vue_app
+git clone https://github.com/AbderahmaneThimbo/Gestion-recettes-app.git
+cd Gestion-recettes-app
 npm install
 ```
 
@@ -53,6 +53,3 @@ Pour la gestion multilingue, l'application intègre i18n pour la traduction, per
 
 [Abderahmane Thimbo](https://github.com/AbderahmaneThimbo)
 
-## Contributeur
-
-[Harouna Traoré](https://github.com/HarounaTraore)

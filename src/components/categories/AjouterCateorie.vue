@@ -20,6 +20,7 @@
             </span>
             <input v-model="categorie.nom" type="text" id="categoryName" class="form-control" required />
           </div>
+          <small v-if="errors.nom" class="text-danger">{{ errors.nom }}</small>
         </div>
         <div class="d-grid">
           <button type="submit" class="btn btn-success">
@@ -39,11 +40,19 @@ import { ref } from "vue";
 const stores = useRecetteStore();
 
 const categorie = ref({ nom: "" });
+const errors = ref({ nom: null });
 
 const addCategory = () => {
-  stores.addCategorie({ nom: categorie.value.nom });
-  categorie.value.nom = "";
+  const existingCategory = stores.categories.find(cat => cat.nom.toLowerCase() === categorie.value.nom.toLowerCase());
+  if (existingCategory) {
+    errors.value.nom = "A category with this name already exists.";
+  } else {
+    errors.value.nom = null;
+    stores.addCategorie({ nom: categorie.value.nom });
+    categorie.value.nom = "";
 
-  router.push("/categories");
+    router.push("/categories");
+  }
+
 };
 </script>
